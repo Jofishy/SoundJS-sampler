@@ -1,17 +1,56 @@
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/SoundJS-sampler/sampler.css">
-</head>
-<body>
-
-    <h1>Browser based sampler!</h1>
-    
-    <div class="sampler"></div>
-
-    <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
-    <script src="/SoundJS-sampler/sampler.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SoundJS Tutorial</title>
+    </head>
+    <body>
+        <header>
+            <h1>SoundJS Tutorial</h1>
+            <h2>Making a browser based sampler</h2>
+            <p>By: Joshua Fisher</p>
+        </header>
+        <nav class="page-nav">
+            <h3>Sections</h3>
+            <ul></ul>
+        </nav>
+        <article>
+            <div id="Introduction" class="intro section">
+                <h3>Introduction</h3>
+                <p>In this tutorial we will learn how to use the SoundJS library to manage sound files, and control their playback. The tutorial will cover creating a simple web application that could be used as a musical sampler, however, you can use the examples and topics covered here to make any type of application that you would like.</p>
+                <p>An example of what the results from this tutorial can be seen <a href="https://joshuasfisher.github.io/SoundJS-sampler/sampler.html">here</a>.
+            </div>
+            <div id="Set up" class="body section">
+                <h3>Setting up for development</h3>
+                <p>In order to start using SoundJS, we need to create a server which can host our webpage. To do this, I will be using NodeJS http-server from npm. You could use your own server setup, or learn more about <a href="https://docs.npmjs.com/">npm</a> and <a href="https://www.npmjs.com/package/http-server">http-server</a>.</p>
+                <p>The first thing we need to do is create a folder/directory for our project. We will also a new html file in that directory named index.html. Here's the html that we will start with in the file.</p>
+                <pre><code>
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        
+        &lt;script src=&quot;https://code.createjs.com/1.0.0/soundjs.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+                <p>Notice the script tag near the end of the document. This is where we include the SoundJS library into our page, and its coming from the latest file hosted by CreateJS as of writing. You can go to <a href="https://code.createjs.com/">https://code.createjs.com/</a> to find the latest url to use in this tag.</p>
+                <p>Now to host this we can run the following command, which will install and run http-server from the current directory.</p>
+                <code>npx http-server ./</code>
+                <p>From here, navigating to <a href="http://localhost:8080/index.html">http://localhost:8080/index.html</a> will pull up the created page, which should just contain our header at this point.</p>
+                <p>The last task for setting up the page is creating our own javascript file. To do this, create an empty file named sampler.js in the same directory, then add the following script tag to the end of the html file.</p>
+                <pre><code>&lt;script src=&quot;/sampler.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <p>Now we can get started creating the sampler!</p>
+            </div>
+            <div id="Import Sounds" class="body section">
+                <h3>Importing sounds into the page</h3>
+                <p></p>
+            </div>
+        </article>
+        <script src="/tut.js"></script>
+    </body>
 </html>
