@@ -1,4 +1,4 @@
-const filepath = "SoundJS-sampler/audio/selected/";
+const filepath = "/SoundJS-sampler//selected/";
 
 const sounds = [
     {name:"bass",src:"808.wav"},
