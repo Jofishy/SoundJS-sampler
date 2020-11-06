@@ -1,4 +1,4 @@
-const filepath = "audio/selected/";
+const filepath = "./audio/";
 const sounds = [
     {name:"bass",src:"808.wav"},
     {name:"hat",src:"closed.wav"},
