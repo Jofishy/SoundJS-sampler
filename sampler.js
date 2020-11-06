@@ -1,4 +1,5 @@
 const filepath = "SoundJS-sampler/audio/selected/";
+
 const sounds = [
     {name:"bass",src:"808.wav"},
     {name:"hat",src:"closed.wav"},
@@ -7,36 +8,26 @@ const sounds = [
 
 const availableButtons = ["q","w","e","r","t"].reverse();
 
-const sources = [];
 const playing = [];
 
 createjs.Sound.addEventListener("fileload", handleLoad);
 createjs.Sound.registerSounds(sounds, filepath);
 
 function handleLoad(event){
-    console.log("loaded:",event);
-    sources.push(event.src);
+    const src = event.src;
 
-    if (sources.length == sounds.length){
-        handleLoaded();
-    }
-}
-
-function handleLoaded(){
-    sources.forEach((src)=>{
-        createPad().addEventListener("click", ()=>{
-            handleSound(src)
-        });
-
-        const key = availableButtons.pop();
-        if (key){
-            document.addEventListener("keydown", (e)=>{
-                if (key === e.key){
-                    handleSound(src);
-                }
-            });
-        }
+    createPad().addEventListener("click", ()=>{
+        handleSound(src)
     });
+
+    const key = availableButtons.pop();
+    if (key){
+        document.addEventListener("keydown", (e)=>{
+            if (key === e.key){
+                handleSound(src);
+            }
+        });
+    }
 }
 
 Array.prototype.search = function(x){
